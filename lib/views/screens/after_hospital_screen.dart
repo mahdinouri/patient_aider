@@ -3,10 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:patient_aider/models/after_hospital.dart';
 import 'package:patient_aider/utils/view_model.dart';
-import 'package:patient_aider/views/screens/home_screen.dart';
 import 'package:patient_aider/views/widgets/main_appbar.dart';
-import 'package:persian_fonts/persian_fonts.dart';
-
 class AterHospirtal extends StatefulWidget {
   const AterHospirtal({super.key});
 

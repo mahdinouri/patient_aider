@@ -1,7 +1,6 @@
 // ignore_for_file: no_logic_in_create_state
 
 import 'package:flutter/material.dart';
-import 'package:patient_aider/views/screens/before_hospital_screen.dart';
 import 'package:patient_aider/views/widgets/home_categories.dart';
 import 'package:persian_fonts/persian_fonts.dart';
 

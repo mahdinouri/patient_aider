@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -20,7 +20,7 @@ class ViewModel extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
-      child: Container(
+      child: SizedBox(
         // decoration: BoxDecoration(border: Border.all(width: 1)),
         width: MediaQuery.of(context).size.width,
         height: 70,

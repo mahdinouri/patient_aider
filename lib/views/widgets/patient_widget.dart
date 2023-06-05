@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
 
@@ -17,22 +17,20 @@ class Patient extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-           Column(
-            children: [
-              GestureDetector(
-                onTap: onPressed,
-                child: Text(title , style: const TextStyle(color: Colors.blue),),
-              ),
-              Text(subTitle)
-            ],
-          ),
-          Image.asset(img)
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+         Column(
+          children: [
+            GestureDetector(
+              onTap: onPressed,
+              child: Text(title , style: const TextStyle(color: Colors.blue),),
+            ),
+            Text(subTitle)
+          ],
+        ),
+        Image.asset(img)
+      ],
     );
   }
 }
