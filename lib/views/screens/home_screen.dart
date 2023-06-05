@@ -12,8 +12,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  AppBar mainAppbar =AppBar(
-            backgroundColor: Colors.blue,
+  AppBar mainAppbar = AppBar(
+            backgroundColor: const Color(0xff1e6091),
             elevation: 0,
             automaticallyImplyLeading: false,
             title: Text(
@@ -28,73 +28,92 @@ class _HomePageState extends State<HomePage> {
           );
   @override
 
-        //   width: MediaQuery.of(context).size.width,
-        // height: MediaQuery.of(context).size.height * 0.75,
+
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-      appBar: mainAppbar,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(60),
+        child: mainAppbar,
+      ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20,0,20,20),
-        child: SingleChildScrollView(
-          child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0,25,0,0),
-            child: Text("بیمار کجاست؟",
-            style: PersianFonts.Samim.copyWith(color: Colors.black , fontSize: 20 ,),
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height * 1,
+          child: SingleChildScrollView(
+            child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0,25,0,0),
+              child: Text("بیمار کجاست؟",
+              style: PersianFonts.Samim.copyWith(color: Colors.black , fontSize: 15 ,),
+              ),
             ),
+            Column(
+              children: [
+            HomeCategory(
+              onPressed: () => (Navigator.of(context).pushNamed('before')),
+            color: const Color(0xff168aad),
+            text: "در خانه در حال آماده سازی",
+            img: "./assets/images/living-room.svg",
+            ),
+            HomeCategory(
+            onPressed: () => (Navigator.of(context).pushNamed('in')),    
+            color: const Color(0xff34a0a4),
+            text: "در بیمارستان",
+            img: "./assets/images/hospital-room.svg",
+            ),
+            HomeCategory(
+            onPressed: () => (Navigator.of(context).pushNamed('after')),    
+            color: const Color(0xff52b69a),
+            text: "در خانه درحال نقاهت",
+            img: "assets/images/hotel-room.svg",
+            ),
+              ],
+            ),
+        
+            Padding(
+              padding:  const EdgeInsets.only(top: 30,bottom: 10),
+              child: Row(
+                children: [
+                  Container(
+                    height: 1,
+                    width: MediaQuery.of(context).size.width * 0.185,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 0.5 , color: Colors.grey,)
+                    ),
+                  ),
+                  const SizedBox(width: 5,),
+                Center(
+                  child: Text(
+                "توسعه داده شده توسط توسعه دهنده" ,
+                textAlign: TextAlign.center,
+                style: PersianFonts.Vazir.copyWith(
+                  color: const Color(0xff184e77),
+                  fontWeight: FontWeight.w600,
+                  fontSize: 12
+                ),
+              ),
+                ),
+                const SizedBox(width: 5,),
+                Container(
+                    height: 1,
+                    width: MediaQuery.of(context).size.width * 0.185,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 0.5 , color: Colors.grey,)
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+              ),
           ),
-          Column(
-            children: [
-          HomeCategory(
-            onPressed: () => (Navigator.of(context).pushNamed('before')),
-          color: Colors.blue,
-          text: "در خانه در حال آماده سازی",
-          img: "./assets/images/living-room.svg",
-          ),
-          HomeCategory(
-          onPressed: () => (Navigator.of(context).pushNamed('in')),    
-          color: Colors.green,
-          text: "در بیمارستان",
-          img: "./assets/images/hospital-room.svg",
-          ),
-          HomeCategory(
-          onPressed: () => (Navigator.of(context).pushNamed('after')),    
-          color: Colors.blueGrey,
-          text: "در خانه درحال نقاهت",
-          img: "assets/images/hotel-room.svg",
-          ),
-            ],
-          ),
-          // GestureDetector(
-          //   onTap: (){},
-          //   child: Padding(
-          //   padding: const EdgeInsets.fromLTRB(0, 25,0,5),
-          //   child:Container(
-          //   width: MediaQuery.of(context).size.width * 0.5,
-          //   height:40,
-          //   decoration: BoxDecoration(
-          //     border: Border.all(width: 1 , color: Colors.blue),
-          //     borderRadius: const BorderRadius.all(Radius.circular(5)),
-          //   ),
-          //   child: const Padding(
-          //     padding: EdgeInsets.fromLTRB(0,5,0,5),
-          //     child: Text("I dont know, Im just browsing...",
-          //   textAlign: TextAlign.center,
-          //   style: TextStyle(color: Colors.blue),
-          //   ),
-          //   ),
-          // ),
-          // ),
-          // )
-          // ,
-        ],
-      ),
         ),
       ),
     ),
-    );
+      );
   }
 
 }

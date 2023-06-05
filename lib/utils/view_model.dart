@@ -49,8 +49,8 @@ class ViewModel extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding:const EdgeInsets.only(left: 5 , bottom: 30),
-                child: SvgPicture.asset(image , width: 35, height: 35,),
+                padding:const EdgeInsets.only(left: 5 , bottom: 35),
+                child: SvgPicture.asset(image , width: 30, height: 30,),
               ),
             ],
           ),

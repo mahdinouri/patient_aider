@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:patient_aider/models/after_hospital.dart';
 import 'package:patient_aider/utils/view_model.dart';
 import 'package:patient_aider/views/widgets/main_appbar.dart';
-class AterHospirtal extends StatefulWidget {
-  const AterHospirtal({super.key});
+class AfterHospital extends StatefulWidget {
+  const AfterHospital({super.key});
 
   @override
-  State<AterHospirtal> createState() => _AterHospirtalState();
+  State<AfterHospital> createState() => _AfterHospitalState();
 }
 
-class _AterHospirtalState extends State<AterHospirtal> {
+class _AfterHospitalState extends State<AfterHospital> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

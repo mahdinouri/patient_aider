@@ -20,7 +20,7 @@ class _InHospitalState extends State<InHospital> {
           backgroundColor: Colors.white,
           appBar:PreferredSize(
             preferredSize: const Size.fromHeight(60.0),
-            child: MainAppBar(title: "بعد از بیمارستان..."),
+            child: MainAppBar(title: "در بیمارستان..."),
           ),
           body: Container(
             padding: const EdgeInsets.fromLTRB(10, 25,15,25),

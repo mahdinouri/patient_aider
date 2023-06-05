@@ -13,7 +13,7 @@ class MainAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-            backgroundColor: Colors.blue,
+            backgroundColor: const Color(0xff1e6091),
             elevation: 0,
             automaticallyImplyLeading: false,
             title: Text(

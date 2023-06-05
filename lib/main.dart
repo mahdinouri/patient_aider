@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:patient_aider/views/screens/after_hospital_screen.dart';
 import 'package:patient_aider/views/screens/before_hospital_screen.dart';
 import 'package:patient_aider/views/screens/home_screen.dart';
 import 'package:patient_aider/views/screens/in_hospital_screen.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         'home' : (BuildContext context) => const HomePage(),
         'before' : (BuildContext context) => const BeforeHospital(),
         'in' : (BuildContext context) => const InHospital(),
-        'after' : (BuildContext context) => const BeforeHospital(),
+        'after' : (BuildContext context) => const AfterHospital(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
