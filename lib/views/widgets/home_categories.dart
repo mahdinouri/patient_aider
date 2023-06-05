@@ -19,7 +19,7 @@ import 'package:persian_fonts/persian_fonts.dart';
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20,25,20,0),
+      padding: const EdgeInsets.only(top: 25),
       child: GestureDetector(
         onTap: onPressed,
         child: Container(
@@ -28,7 +28,7 @@ import 'package:persian_fonts/persian_fonts.dart';
         borderRadius: const BorderRadius.all(Radius.circular(10))
       ),
       width: MediaQuery.of(context).size.width,
-      height: 140,
+      height: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

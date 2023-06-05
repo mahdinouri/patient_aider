@@ -27,14 +27,17 @@ class _HomePageState extends State<HomePage> {
             centerTitle: true,
           );
   @override
+
+        //   width: MediaQuery.of(context).size.width,
+        // height: MediaQuery.of(context).size.height * 0.75,
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
       appBar: mainAppbar,
-      body: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height * 0.75,
-        child: Column(
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(20,0,20,20),
+        child: SingleChildScrollView(
+          child: Column(
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(0,25,0,0),
@@ -88,6 +91,7 @@ class _HomePageState extends State<HomePage> {
           // ,
         ],
       ),
+        ),
       ),
     ),
     );
