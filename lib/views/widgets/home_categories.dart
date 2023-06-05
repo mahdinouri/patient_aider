@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:persian_fonts/persian_fonts.dart';
 
  class HomeCategory extends StatelessWidget {
   Color color;
@@ -18,7 +19,7 @@ import 'package:flutter_svg/flutter_svg.dart';
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(5,25,5,10),
+      padding: const EdgeInsets.fromLTRB(20,25,20,0),
       child: GestureDetector(
         onTap: onPressed,
         child: Container(
@@ -34,14 +35,14 @@ import 'package:flutter_svg/flutter_svg.dart';
           Padding(
             padding: const EdgeInsets.fromLTRB(15,10,10,10),
             child: Text(text,
-            style: const TextStyle(color: Colors.white , fontSize: 20),
+            style: PersianFonts.Samim.copyWith(color: Colors.white , fontSize: 17 , fontWeight: FontWeight.w400),
             ),
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(15,10,15,10),
-            child: SvgPicture.asset(img , fit: BoxFit.cover,width: 80, height: 80,colorFilter: ColorFilter.mode(Colors.white
-          , BlendMode.srcIn),)
-          )
+            child:SvgPicture.asset(img , fit: BoxFit.cover,width: 65, height: 65,colorFilter: const ColorFilter.mode(Colors.white
+          , BlendMode.srcIn),) 
+          ),
         ],
       ),
     ),
