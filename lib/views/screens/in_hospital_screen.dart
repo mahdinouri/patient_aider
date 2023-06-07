@@ -28,7 +28,7 @@ class _InHospitalState extends State<InHospital> {
             itemCount: hosTitle.length,
             itemBuilder:(context , index) {
             return ViewModel(
-              onPressed: () => print("test"),
+              onPressed: () => Navigator.of(context).pushNamed(hosRoute[index]),
               title: hosTitle[index],
               subTtitle: hosSubTitle[index],
               image: hosImages[index],

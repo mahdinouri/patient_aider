@@ -29,7 +29,7 @@ class MainAppBar extends StatelessWidget {
               Directionality(
               textDirection: TextDirection.ltr,
               child: IconButton(
-                onPressed: () => Navigator.of(context).pushNamed('home'), 
+                onPressed: () => Navigator.pop(context), 
                 icon: const Icon(Icons.arrow_back_ios_new) , iconSize: 20,)
               )
             ],
