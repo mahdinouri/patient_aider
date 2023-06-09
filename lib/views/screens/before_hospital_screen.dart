@@ -30,7 +30,7 @@ class _BeforeHospitalState extends State<BeforeHospital> {
               title: homeTitle[index],
               subTtitle: homeSubTitle[index],
               image: homeImages[index],
-              onPressed: (){return const Text("Pressed");},
+              onPressed: () => Navigator.of(context).pushNamed(homeRoute[index]),
             );
           }),
           )

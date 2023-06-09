@@ -26,7 +26,7 @@ class _AfterHospitalState extends State<AfterHospital> {
             itemCount: bedTitle.length,
             itemBuilder:(context , index) {
             return ViewModel(
-              onPressed: (){},
+              onPressed: () => Navigator.of(context).pushNamed(bedRoute[index]),
               title: bedTitle[index],
               subTtitle: bedSubTitle[index],
               image: bedImages[index],
